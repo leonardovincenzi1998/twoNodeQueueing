@@ -1,0 +1,95 @@
+version 3
+run General-539-20251018-00:11:11-23841
+attr configname General
+attr datetime 20251018-00:11:11
+attr datetimef 20251018-001111
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars "$0=6.0s, $1=0.8, $2=0.9"
+attr iterationvarsd 6.0s/0.8/0.9
+attr iterationvarsf 6.0s,0.8,0.9-
+attr measurement "$0=6.0s, $1=0.8, $2=0.9"
+attr network TwoNodeQueueing.simulations.TwoNodeNetwork
+attr processid 23841
+attr repetition 19
+attr replication #19
+attr resultdir results
+attr runnumber 539
+attr seedset 19
+config network TwoNodeQueueing.simulations.TwoNodeNetwork
+config sim-time-limit 20000s
+config repeat 20
+config seed-set 19
+config warmup-period 1000s
+config **.source.interArrivalTime 6.0s
+config **.source.userTypeProbability 0.8
+config **.node1.feedbackProbability 0.9
+
+par TwoNodeNetwork.source typename "\"TwoNodeQueueing.simulations.Source\""
+par TwoNodeNetwork.source interArrivalTime 6s
+attr unit s
+par TwoNodeNetwork.source userTypeProbability 0.8
+par TwoNodeNetwork.node1 typename "\"TwoNodeQueueing.simulations.Node1\""
+par TwoNodeNetwork.node1 serviceTimeU1_a 1s
+attr unit s
+par TwoNodeNetwork.node1 serviceTimeU1_b 1s
+attr unit s
+par TwoNodeNetwork.node1 serviceTimeU2_c 1s
+attr unit s
+par TwoNodeNetwork.node1 serviceTimeU2_d 2s
+attr unit s
+par TwoNodeNetwork.node1 feedbackProbability 0.9
+scalar TwoNodeNetwork.node1 queueLenNode1_U2:timeavg 2.6786290370274
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source queueLenNode1_U2
+attr title "Queue Length Node 1 U2, timeavg"
+scalar TwoNodeNetwork.node1 queueLenNode1_U1:timeavg 0.50219358760376
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source queueLenNode1_U1
+attr title "Queue Length Node 1 U1, timeavg"
+par TwoNodeNetwork.node2 typename "\"TwoNodeQueueing.simulations.Node2\""
+par TwoNodeNetwork.node2 serviceTimeSS1 3s
+attr unit s
+par TwoNodeNetwork.node2 serviceTimeSS2 4s
+attr unit s
+scalar TwoNodeNetwork.node2 queueLenSS2:timeavg 62.650578196529
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source queueLenSS2
+attr title "Queue Length SS2, timeavg"
+scalar TwoNodeNetwork.node2 queueLenSS1:timeavg 933.78735184178
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source queueLenSS1
+attr title "Queue Length SS1, timeavg"
+par TwoNodeNetwork.sink typename "\"TwoNodeQueueing.simulations.Sink\""
+statistic TwoNodeNetwork.sink sojournTimeU2:stats
+field count 519
+field mean 1773.7739359897
+field stddev 1801.8190274877
+field min 1.121749230893
+field max 11631.694158519
+field sum 920588.67277865
+field sqrsum 3314630029.9912
+attr interpolationmode none
+attr recordingmode stats
+attr source sojournTimeU2
+attr title "Sojourn Time U2"
+attr unit s
+statistic TwoNodeNetwork.sink sojournTimeU1:stats
+field count 833
+field mean 3601.3704661333
+field stddev 3980.3597886145
+field min 1
+field max 18724.000864531
+field sum 2999941.5982891
+field sqrsum 23985496759.157
+attr interpolationmode none
+attr recordingmode stats
+attr source sojournTimeU1
+attr title "Sojourn Time U1"
+attr unit s
+par TwoNodeNetwork typename "\"TwoNodeQueueing.simulations.TwoNodeNetwork\""
+

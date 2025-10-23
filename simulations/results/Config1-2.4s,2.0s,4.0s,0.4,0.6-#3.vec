@@ -1,0 +1,67 @@
+version 3
+run Config1-3-20251017-23:25:20-23521
+attr configname Config1
+attr datetime 20251017-23:25:20
+attr datetimef 20251017-232520
+attr experiment Config1
+attr inifile omnetpp.ini
+attr iterationvars "$0=2.4s, $1=2.0s, $2=4.0s, $3=0.4, $4=0.6"
+attr iterationvarsd 2.4s/2.0s/4.0s/0.4/0.6
+attr iterationvarsf 2.4s,2.0s,4.0s,0.4,0.6-
+attr measurement "$0=2.4s, $1=2.0s, $2=4.0s, $3=0.4, $4=0.6"
+attr network TwoNodeQueueing.simulations.TwoNodeNetwork
+attr processid 23521
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+config description "Service times config 1"
+config **.node1.serviceTimeU1_a 1.4s
+config **.node1.serviceTimeU1_b 2.6s
+config **.node1.serviceTimeU2_c 1.0s
+config **.node1.serviceTimeU2_d 4.0s
+config **.node2.serviceTimeSS1 2.4s
+config **.node2.serviceTimeSS2 2.0s
+config network TwoNodeQueueing.simulations.TwoNodeNetwork
+config sim-time-limit 20000s
+config repeat 20
+config seed-set 3
+config warmup-period 1000s
+config **.source.interArrivalTime 4.0s
+config **.source.userTypeProbability 0.4
+config **.node1.feedbackProbability 0.6
+
+vector 0 TwoNodeNetwork.node1 queueLenNode1_U1:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source queueLenNode1_U1
+attr title "Queue Length Node 1 U1"
+vector 1 TwoNodeNetwork.node1 queueLenNode1_U2:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source queueLenNode1_U2
+attr title "Queue Length Node 1 U2"
+vector 2 TwoNodeNetwork.node2 queueLenSS1:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source queueLenSS1
+attr title "Queue Length SS1"
+vector 3 TwoNodeNetwork.node2 queueLenSS2:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source queueLenSS2
+attr title "Queue Length SS2"
+vector 4 TwoNodeNetwork.sink sojournTimeU1:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source sojournTimeU1
+attr title "Sojourn Time U1"
+attr unit s
+vector 5 TwoNodeNetwork.sink sojournTimeU2:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source sojournTimeU2
+attr title "Sojourn Time U2"
+attr unit s
+
