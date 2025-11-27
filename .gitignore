@@ -1,0 +1,46 @@
+# --- OMNeT++ Build & Simulation Files ---
+
+# Cartella di output della compilazione (contiene i file oggetto .o)
+out/
+
+# Cartella dei risultati delle simulazioni 
+simulations/results/
+results/
+
+# File eseguibili generati 
+src/twoNodeQueueing
+src/twoNodeQueueing_dbg
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# File generati dai messaggi (.msg)
+
+*_m.cc
+*_m.h
+
+# File temporanei di compilazione
+*.o
+*.d
+
+# Makefiles
+Makefile
+src/Makefile
+simulations/Makefile
+
+# --- IDE Files (Eclipse/OMNeT++ IDE) ---
+.classpath
+.project
+.cproject
+.settings/
+.scave/
+.nedexclusions
+.nedfolders
+.oppbuildspec
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
