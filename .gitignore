@@ -1,41 +1,43 @@
-# Prerequisites
-*.d
+# --- OMNeT++ Build & Simulation Files ---
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Cartella di output della compilazione (contiene i file oggetto .o)
+out/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Cartella dei risultati delle simulazioni 
+simulations/results/
+results/
 
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+# File eseguibili generati 
+src/twoNodeQueueing
+src/twoNodeQueueing_dbg
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
+# File generati dai messaggi (.msg)
 
-# debug information files
-*.dwo
+*_m.cc
+*_m.h
+
+# File temporanei di compilazione
+*.o
+*.d
+
+# Makefiles
+Makefile
+src/Makefile
+simulations/Makefile
+
+# --- IDE Files (Eclipse/OMNeT++ IDE) ---
+.classpath
+.project
+.cproject
+.settings/
+.scave/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
