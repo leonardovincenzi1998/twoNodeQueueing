@@ -1,4 +1,4 @@
-# 📊 Analisi di un Sistema a Coda Distribuito
+# 📊 Analisi di una Rete di Code (Queueing Network) a due nodi con Feedback
 ### Progetto n. 8: Rete a due nodi con feedback ritardato
 
 ![OMNeT++](https://img.shields.io/badge/Simulatore-OMNeT%2B%2B-blue)
@@ -6,7 +6,7 @@
 
 ## 1. Introduzione e Abstract
 
-Il presente progetto si pone l’obiettivo di analizzare le prestazioni di un **sistema a coda distribuito**, modellando una rete a due nodi con meccanismi di feedback ritardato. La simulazione è realizzata mediante il framework **OMNeT++**.
+Il presente progetto si pone l’obiettivo di analizzare le prestazioni di un **sistema a code a due nodi con Feedback**, modellando una rete a due nodi con meccanismi di feedback ritardato. La simulazione è realizzata mediante il framework **OMNeT++**.
 
 L'analisi si concentra sulla risposta del sistema sotto carico e sulla gestione differenziata dell'utenza.
 
